@@ -13,14 +13,15 @@ int main()
 	char x;
 	for(i=0;i<len;i++)
 	{
+		temp=s[i];
 		x=str[i];
 		x=x+k;
 		str[i]=x;
-		if(isupper(str[i]) && x>90)
+		if(isupper(temp) && x>90)
 		{
 			str[i]=x-26;
 		}
-		if(islower(str[i]) && x>122)
+		if(islower(temp) && x>122)
 		{ 
 			str[i]=x-26;
 		}		
@@ -28,14 +29,15 @@ int main()
 	printf("\nEncrypted value= %s\n",str);
 	for(i=0;i<len;i++)
 	{
+		temp=s[i];
 		x=str[i];
 		x=x-k;
 		str[i]=x;
-		if(isupper(str[i]) && x<65)
+		if(isupper(temp) && x<65)
 		{
 			str[i]=x+26;
 		}
-		if(islower(str[i]) && x<97)
+		if(islower(temp) && x<97)
 		{
 			str[i]=x+26;
 		}		
